@@ -1,0 +1,31 @@
+
+
+if the post table is empty
+Post creation validation
+
+Customize error messages
+don't return the entire post
+
+Now: numeric errors,
+
+Abilities:
+    Everyone:
+        user-update
+        user-view
+        post-view
+        post-create
+        post-update
+        post-delete
+        post-get-all
+        user-get-all
+        achievement-get-all
+    
+    Admin:
+        user-update-admin
+        user-delete
+        user-achievement-update
+        user-achievement-delete 
+        achievement-create
+        achievement-update
+        achievement-delete
+        view-all

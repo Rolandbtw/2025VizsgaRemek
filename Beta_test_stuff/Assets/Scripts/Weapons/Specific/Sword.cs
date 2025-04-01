@@ -1,0 +1,57 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using static UnityEngine.GridBrushBase;
+
+public class Sword : MonoBehaviour
+{
+    [Header("GameObjects and Transforms")]
+    public Transform slashWavePositon;
+    public GameObject slashWave;
+    [Header("Floats to customize")]
+    public float cooldown;
+    public float damage;
+    public float knockbakcForce;
+    public float waveMoveForce;
+
+    private Vector3 originalPosition;
+    private float timer;
+
+    private BasicSlicing slicingScript;
+    private Runes runes;
+    private CooldownSignal cooldownSignal;
+    Sounds soundScript;
+
+    IEnumerator Start()
+    {
+        soundScript = GameObject.FindGameObjectWithTag("Generator").GetComponent<Sounds>();
+        runes = GameObject.FindGameObjectWithTag("Player").GetComponent<Runes>();
+        slicingScript = GetComponent<BasicSlicing>();
+
+        cooldownSignal =GameObject.FindGameObjectWithTag("Cooldown").GetComponent<CooldownSignal>();
+        yield return null;
+        cooldownSignal.PlayCooldownAnim(cooldown * runes.playerUltCooldownMultiplier);
+        timer = Time.time + cooldown * runes.playerUltCooldownMultiplier;
+    }
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyBindings.ultAttack) && slicingScript.timer < Time.time && timer < Time.time && !runes.inventoryIsOpened && Time.timeScale != 0)
+        {
+            originalPosition=slashWavePositon.position;
+            slicingScript.StartSlice();
+            StartCoroutine(WaitForSlash());
+            timer = Time.time + cooldown*runes.playerUltCooldownMultiplier; // runes
+            cooldownSignal.PlayCooldownAnim(cooldown * runes.playerUltCooldownMultiplier);
+        }
+    }
+
+    IEnumerator WaitForSlash()
+    {
+        yield return new WaitForSeconds(slicingScript.rotateUpDuration);
+        soundScript.MakeSound("swordSound", 0.5f);
+        GameObject wave = Instantiate(slashWave, originalPosition, slicingScript.originalRotation);
+        wave.GetComponent<Rigidbody2D>().AddForce(wave.transform.right * -1 * waveMoveForce, ForceMode2D.Impulse);
+        wave.GetComponent<ImpactWave>().damage = damage;
+    }
+}

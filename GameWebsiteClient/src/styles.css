@@ -1,0 +1,1008 @@
+:root{
+    --textColor: rgb(231, 231, 231);
+    --textBoxcolor: rgba(143, 210, 255, 0.582);
+    --boxColor: rgb(18, 18, 66);
+}
+
+#root{
+    position: relative;
+    min-height: 100vh;
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgb(19, 28, 75), rgb(18, 82, 112));
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--textColor);
+}
+
+nav > ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: center;
+    background-color: none;
+    margin: 0;
+    padding: 0 5px;
+}
+
+nav>ul>li{
+    cursor: pointer;
+    height: fit-content;
+    padding: 10px 5px;
+}
+
+
+.navElement{
+    display: block;
+    text-decoration: none;
+    font-size: 20px;
+    color: var(--textColor);
+    padding: 15px 20px;
+    transition: 0.5s;
+    border-radius: 10px;
+}
+
+.navElement:hover{
+    background-color: rgba(65, 102, 180, 0.527);
+    transition: 0.5s;
+}
+
+
+
+footer{
+    background-color: var(--boxColor);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon{
+    width: 20px;
+    margin-right: 5px;
+    height: 100%;
+}
+
+.footerElement{
+    max-width: 30%;
+}
+
+.contactElement>p{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.contactElement{
+    display: flex;
+    align-items: center;
+}
+
+.centerText{
+    text-align: center;
+}
+
+.justifyText{
+    text-align: justify;
+}
+
+.showCase, .team{
+    padding: 20px;
+}
+
+.achievementMargin{
+    margin-left: 20px;
+}
+
+.imgContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.imgContainer>img{
+    width: 30%;
+}
+
+figure>img{
+    width: 100%
+}
+
+figure{
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+figcaption{
+    text-align: center;
+}
+
+.team{
+    background-color: rgb(37, 153, 168);
+    color: rgb(9, 14, 32);
+    position: relative;
+    padding-bottom: 200px;
+    margin-top: 50px;
+}
+
+.waves {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.waves svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 150px;
+}
+
+
+.centerScreen{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.centerHorizontal{
+    margin-left: 50%;
+    transform: translateX(-50%);
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.loginSize{
+    width: 400px;
+}
+
+
+.coolBox{
+    padding: 30px;
+    padding-bottom: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 7px rgba(153, 184, 250, 0.527);
+    background-image: linear-gradient(45deg, rgb(19, 28, 75), rgb(18, 82, 112));
+}
+
+.coolBox>img{
+    max-width: 100%;
+}
+
+.linkButton,
+.linkButton:visited,
+.linkButton:active{
+    text-decoration: none;
+    color: var(--textColor);
+    border: 1px solid var(--textColor);
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 20px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    max-width: 180px;
+}
+
+.linkButton:hover{
+    background-color: rgba(127, 193, 236, 0.582);
+    transition: 0.3s;
+}
+
+.dropDownStyle{
+    background: none;
+    border: 1px solid black;
+    color: black;
+    width: 140px;
+    height: 40px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.coolBox > h1{
+    text-align: center;
+}
+
+.coolBox > p > a{
+    text-align: center;
+    color: rgba(127, 193, 236, 0.582);
+}
+.coolBox > p >a:visited{
+    color: rgba(122, 131, 138, 0.582);
+}
+.coolBox > p >a:hover{
+    color: rgba(159, 215, 252, 0.582);
+}
+
+.registerText{
+    display: block;
+    text-align: center;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.loginForm * {
+    margin: 10px;
+    height: 40px;
+    border-radius: 15px;
+}
+
+.loginForm input, .loginForm select, textarea{
+    background-color: var(--textBoxcolor);
+    border: 2px solid rgb(18, 39, 97);
+    padding: 0 15px;
+    font-size: 120%;
+    margin-top: 5px;
+}
+
+.loginForm label{
+    height: 20px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-left: 10px;
+    padding-left: 15px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  appearance: textfield;
+}
+
+.loginForm button, .postForm button{
+    font-size: 120%;
+    border: 2px solid rgb(18, 39, 97);
+    width: 50%;
+    display: block;
+    height: 50px;
+    margin: 20px auto;
+    margin-bottom: 2px;
+}
+
+.feedBack{
+    position: fixed;
+    /* right: 20px;
+    bottom: 25px; */
+    left: 50%;
+    transform: translateX(-50%);
+    top: 30px;
+    z-index: 10;
+    padding: 0 10px;
+    font-size: 120%;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.feedBack > p{
+    margin: 10px;
+}
+
+.success{
+    background-color: rgba(75, 233, 128, 0.699);
+    border: 2px solid rgb(28, 134, 64);
+}
+
+.failure{
+    background-color: rgba(185, 64, 64, 0.548);
+    border: 2px solid rgb(189, 19, 19);
+}
+
+textarea{
+    resize: none;
+}
+
+.postForm{
+    display: flex;
+    flex-direction: column;
+}
+
+.postForm *{
+    border-radius: 15px;
+    margin-top: 20px;
+}
+
+.menuBox{
+    width: 300px;
+    border-radius: 10px;
+    background-color: var(--boxColor);
+    border: 2px solid rgb(39, 75, 129);
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    position: fixed;
+    right: 10px;
+    top: 70px;
+    z-index: 10;
+}
+
+.menuBox * {
+    text-align: center;
+}
+
+.menuBox > h1{
+    margin-bottom: 0;
+}
+
+.menuBox > a{
+    padding-top: 10px;
+    color: var(--textColor);
+    text-decoration: none;
+}
+
+.menuBox > hr{
+    color: rgb(21, 27, 102);
+    width: 100%;
+}
+
+.menuBox > button{
+    padding-top: 10px;
+    font-size: 100%;
+    background-color: transparent;
+    color:  red;
+    border: none;
+    cursor: pointer;
+}
+
+.xButton{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+}
+
+.xButton>img{
+    max-width: 20px;
+    max-height: 20px;
+}
+
+.searchContainer{
+    margin-top: 20px;
+    
+}
+.searchForm{
+    
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.sortContainer{
+    display: flex;
+    justify-content: center;
+}
+
+#sortBy, #sortDir, #searchBar, .searchButton{
+    background: none;
+    color: var(--textColor);
+    font-size: 120%;
+    font-weight: 600;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    transition: 0.3s;
+    border: none;
+    padding: 0 10px;
+    height: 50px;
+    border-bottom: 1px solid white;
+}
+
+#sortBy{
+    border-bottom-left-radius: 15px;
+    border-left: 1px solid white;
+}
+
+#sortDir{
+    border-bottom-right-radius: 15px;
+    border-right: 1px solid white;
+}
+
+.searchButton{
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top: 1px solid white;
+    border-right: 1px solid white;
+}
+
+
+#searchBar{
+    width: 300px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    border-top: 1px solid white;
+    border-left: 1px solid white;
+    outline: none;
+    height: 49px;
+    transition: 0.3s;
+}
+
+option{
+    color: black;
+}
+
+#searchBar:focus, #sortDir:focus, #sortBy:focus{
+    box-shadow: inset 0 0 3px rgb(255, 255, 255);
+}
+
+.searchButton:hover, #searchBar:hover, #sortBy:hover, #sortDir:hover{
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+}
+
+.listBox{
+    position: relative;
+    z-index: 1;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: 20px 20px 0 20px;
+    background-image: linear-gradient(225deg, rgb(19, 28, 75), rgb(18, 82, 112));
+    transition: 0.3s;
+}
+.listBox:hover{
+    box-shadow: inset 0 0 3px rgb(255, 255, 255);
+}
+
+.listBox>img{
+    width: 100%;
+    display: block;
+    margin: auto;
+    margin-top: 10px;
+}
+
+.listBoxPadding{
+    padding-top: 50px;
+    position: relative;
+}
+
+hr{
+    padding: 0;
+    margin: 0;
+}
+.deleteBox{
+    background-image: none;
+    background-color: rgb(35, 35, 59); 
+    /* Idk somehow gray it out */
+}
+
+
+.formError{
+    color: red;
+    display: none;
+}
+
+input:invalid[focused="true"] + .formError{
+    display: block;
+}
+
+.confirmWindow{
+    border-radius: 15px;
+    width: 500px;
+    background: var(--boxColor);
+    position: fixed;
+    padding: 10px;
+    border: solid 1px var(--textColor);
+    text-align: center;
+    z-index: 10;
+}
+.confirmWindow button{
+    margin: 10px;
+    margin-top: 20px;
+    font-size: 120%;
+    color: var(--textColor);
+    padding: 5px 10px;
+    background: none;
+}
+.confirmWindow hr{
+    width: 60%;
+    display: block;
+    margin: auto;
+}
+::placeholder {
+    color: rgb(19, 28, 75);
+}
+
+.loaderContainer{
+    position: fixed;
+    display: "inline-block";
+    width: "3rem";
+    height: "3rem";
+    box-sizing: "border-box";
+    z-index: 10;
+}
+
+.circleButton{
+    color: var(--textColor);
+    font-size: 120%;
+    border-radius: 30px;
+    border: none;
+    height: 50px;
+    width: fit-content;
+    padding: 8px;
+    background: none;
+}
+
+.circleButton:hover{
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.like>img{
+    margin-bottom: -4px !important;
+}
+
+.circleButton img{
+    height: 35px;
+    width: 35px;
+    display: block;
+    margin: auto;
+}
+
+.backButton{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+.smallPicture{
+    height: 20px;
+    width: 20px;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.postTitle{
+    display: inline-block;
+    line-break: anywhere;
+    cursor: pointer;
+
+}
+
+.flare{
+    margin-bottom: 0;
+}
+
+.postBottom{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    vertical-align: middle;
+
+}
+
+.likeNumber{
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+
+}
+
+.likeNumber>button, .likeNumber>p{
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+
+}
+.likeNumber>p{
+    left: 60px !important;
+    margin: 13px -10px !important;
+}
+
+.likeNumber>button, .likeNumber>p{
+    display: inline-block;
+}
+
+.dates{
+    height: 85px;
+
+}
+.dates>p{
+    width: fit-content;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+
+}
+.bottomDate{
+    top: 45px;
+
+}
+.edit{
+    left: 90px;
+}
+.delete{
+    color: white;
+    left: 140px;
+}
+
+.editNoLike{
+    left: 0;
+}
+
+.deleteNoLike{
+    left: 50px;
+}
+
+.topDate{
+    top: 5px;
+}
+
+.userDataShow{
+    line-break: anywhere;
+    vertical-align: middle;
+    display: grid;
+    margin: 20px auto;
+    width: 300px;
+    grid-template-columns: 50% 50%;
+}
+
+.userDataShow > p{
+    margin-top: 5px;
+    text-align: left;
+    color: var(--textColor);
+    border-collapse: collapse;
+    border: 1px solid var(--textColor);
+    padding: 10px;
+    border-right: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.userDataShow > :first-child {
+    grid-column: span 2;
+    margin-top: 30px;
+    text-align: center;
+    border-right: 1px solid var(--textColor) !important;
+    border-radius: 5px;
+}
+
+.userDataShow > :nth-child(2) {
+    margin-bottom: 50px;
+    grid-column: span 2;
+    text-align: center;
+    border-right: 1px solid var(--textColor) !important;
+    border-radius: 5px;
+}
+
+.userDataShow > :last-child {
+    text-align: center;
+    grid-column: span 2;
+    border: 1px solid var(--textColor) !important;
+    border-radius: 5px;
+}
+
+.right{
+    text-align: right !important;
+    border-right: 1px solid var(--textColor) !important;
+    border-left: none !important;
+    border-bottom-left-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.userImage{
+    height: 45px;
+    width: 45px;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 30px;
+}
+
+
+
+.profilP{
+    display: none;
+}
+.profileImage{
+    display: inline-block;
+    height: 35px;
+    width: 35px;
+    vertical-align: middle;
+    padding: 10px;
+    border-radius: 30px;
+}
+.userName{
+    display: inline-block;
+}
+
+.dataButton, .link{
+    color: var(--textColor);
+    font-size: 120%;
+    border-radius: 30px;
+    border: none;
+    width: fit-content;
+    display: block;
+    height: 50px;
+    padding: 7px;
+    margin: 20px auto;
+    margin-bottom: 2px;
+    background: none;
+}
+
+.link{
+    height: 36px;
+}
+
+button>img{
+    cursor: pointer;
+}
+
+.dataButtonAdmin{
+    color: var(--textColor);
+    font-size: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--textColor);
+    width: fit-content;
+    display: block;
+    height: 40px;
+    margin: 20px auto;
+    margin-bottom: 2px;
+    background: none;
+}
+
+.dataButtonAdmin:hover, .dataButton:hover, .link:hover{
+    box-shadow: inset 0 0 5px rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.link>img, .dataButton>img{
+    height: 100%;
+    width: 100%;
+}
+
+.achievementTitle{
+    text-align: center;
+    margin: 30px;
+}
+
+.achievement{
+    text-align: left;
+    display: grid !important;
+    grid-template-columns: 1fr 2fr;
+    display: block;
+    margin: 15px auto;
+    width: 300px;
+    border-radius: 10px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    background: linear-gradient(225deg, rgb(19, 28, 75), rgb(18, 82, 112));
+    justify-content: center;
+    align-items: center;
+}
+.achievement>img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: auto;
+}
+
+.achievement>div{
+    width: 100%;
+    height: fit-content;
+    display: block;
+    margin: auto;
+}
+
+.achievement>div>p{
+    margin: 0 10px;
+    text-align: left;
+    line-break: anywhere;
+}
+.achievement>div>p:first-child{
+    font-weight: 600;
+    font-size: large;
+}
+
+.inlineDisplay{
+    display: inline-block;
+}
+
+.leaderBoard{
+    width: 100%;
+    /* border: 3px solid rgb(7, 4, 20); */
+    border-collapse: collapse;
+    background-color: rgb(141, 147, 151);
+}
+
+.leaderBoard th, .leaderBoard td{
+    text-align: left;
+    border: 1px solid rgb(7, 4, 20);
+}
+
+.leaderBoard tbody tr:nth-child(odd){
+    background-color: rgb(175, 182, 187);
+}
+
+.leaderBoard td{
+    height: 30px;
+}
+
+.leaderBoard thead{
+    height: 50px;
+    background-color: rgb(107, 120, 155);
+}
+
+i{
+    font-size: smaller;
+}
+
+@media only screen and (max-width: 900px) {
+    .navElement{
+        padding: 10px 5px;
+    }
+
+    .imgContainer{
+        flex-direction: column;
+        align-items: center;
+    }
+    .imgContainer>img{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .coolBox{
+        box-sizing: border-box;
+        width: 100%;  
+    }
+}
+
+@media(max-width: 750px){
+
+    nav > ul{
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+    }
+    nav>ul>li{
+        width: 100%;
+        padding: 0;
+    }
+    .navElement{
+        padding: 20px;
+    }
+    .navElement{
+        font-size: 20px;
+        padding: 20px 15px;
+        border-radius: 0;
+        text-align: center;
+    }
+    .menuBox{
+        top: 40vh;
+    }
+}
+
+@media only screen and (max-width: 680px){
+    .navElement{
+        font-size: large;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .profilP{
+        display: block;
+        margin: 0;
+    }
+    .userImage{
+        display: none;
+    }
+
+    footer{
+        flex-direction: column;
+        align-items: center;
+    }
+    footer>*{
+        text-align: center;
+    }
+    .footerElement{
+        max-width: 100%;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .confirmWindow{
+        width: 300px;
+    }
+
+    .listBox{
+        margin: 20px 0;
+    }
+
+    .menuBox{
+        box-sizing: border-box;
+        width: 100%;
+        right: 0;
+        left: 0;
+    }
+    .menuBox>a, .menuBox>button{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    .coolBox{
+       padding-right: 0;
+       padding-left: 0;
+    }
+
+    .team {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .listBox{
+        padding-bottom: 130px;
+        position: relative
+    }
+    .postBottom{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        right: 0;
+        left: 0;
+        margin-inline: auto;
+        height: 120px;
+        margin-left: 20px;
+    }
+    .dates{
+        bottom: 0;
+    }
+    .dates>p{
+        width: fit-content;
+        bottom: 20px;
+        left: 0;
+        margin-right: 40px;
+    }
+    .bottomDate{    
+        top: 70px;
+    }
+    .likeNumber{
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        vertical-align: middle;
+    }
+    
+    .likeNumber>button, .likeNumber>p{
+        display: inline-block;
+        top: 0;
+        
+    }
+    .likeNumber>p{
+        left: 50px;
+        margin: 10px -10px;
+    }
+    .topDate{
+        top: 30px;
+    }
+    #searchBar{
+        width: 200px;
+    }
+    #sortBy{
+        font-size: medium;
+    }
+    #sortDir{
+        font-size: medium;
+    }
+}
