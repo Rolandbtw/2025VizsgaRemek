@@ -1,0 +1,210 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Default Local Group
+  m_EditorClassIdentifier: 
+  m_GroupName: Default Local Group
+  m_Data:
+    m_SerializedData: []
+  m_GUID: c1538374bb356da4abe8c21bd877c380
+  m_SerializeEntries:
+  - m_GUID: 07835a497b160844b81e7dfbb2e0b904
+    m_Address: Shield_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 168df6f793ba6e2488e915467a660c91
+    m_Address: Shield_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17eb14183925e194e9a2421409bff809
+    m_Address: Spear_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 19d13d5610d490a4e9b45138618e0643
+    m_Address: Speed_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1cc04904a7a985b4c86ce23782ff0b77
+    m_Address: Katana_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 273d89ec82f65804aa1bbee95a8816cc
+    m_Address: Hammer
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30b7e54cd6c3b5b4d8a0104903ff1fdd
+    m_Address: Katana_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3186ff6f334bb0b4c8bebca901b66194
+    m_Address: Power_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 356e7e10b02c2244288600380ea68e5d
+    m_Address: Katana
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 35c528488a8766647bbd2a62aad8c0a3
+    m_Address: IceStaff
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 37b961f1671436d4ab77ec90da2d653b
+    m_Address: Skull_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 39a08567217a5964b9b5f9e064090fb6
+    m_Address: Bubble_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46ead04a4a095964982c7200c99b947e
+    m_Address: Skull_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4ccfae5b437a4d048acb62506994b1ef
+    m_Address: Sword
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4d67d163ad72ba647926dee6d0093205
+    m_Address: Hammer_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5bc11e3cabf730f4eb46fc22b4809c0c
+    m_Address: IceStaff_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6c718ed34de403c4c8de17d12ee6e3bd
+    m_Address: Magic_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8ac99fbacb952d34fb1de6445d16853d
+    m_Address: Cooldown_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9b46193e7639cfe46af2764105992931
+    m_Address: Spear
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a193190f5dc50cc47902ee2bb3675073
+    m_Address: Speed_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ac9d4c1d2d961d645b393ab8c71e39d4
+    m_Address: Sword_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b0411d6481ee0024b94bbf2d8b303979
+    m_Address: IceStaff_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b29005f7cce88a445a71098ea4448749
+    m_Address: Regeneration_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b505cf5bc10ce9749a7779c7fe69f55a
+    m_Address: Power_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b559736bde1b1af41bfaaf9ae710f3ac
+    m_Address: Bow
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c9ca1a2d36678df48947d8ed215ab15d
+    m_Address: Staff
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca78d90627e50b8439b2ef429dc404f2
+    m_Address: Bow_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd0f5a9fff60d9145af94925765a13c1
+    m_Address: Spear_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d20cc36cbe9dedd4786d22237eac7e30
+    m_Address: Sword_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da8ef2384fb0f6843997d3bc40430064
+    m_Address: Staff_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dab1f8115c777c249ab64226cda861dd
+    m_Address: Hammer_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dea88b175bd25e24ba45b4c35a817a46
+    m_Address: Bubble_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: def078b34b4dff144b2b8e64194ee1c3
+    m_Address: Staff_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e3960d9cbe9874d49a44ed63a1f2df74
+    m_Address: Magic_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f4f50a2cc79c8da45a443f8f9083f4ce
+    m_Address: Bow_Icon
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f9713ca70726d9a4483bfdf716f75e1a
+    m_Address: Regeneration_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: faa272dd22c5e8c419ab1ccd0a540861
+    m_Address: Cooldown_PickUp
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: a92d13f0c4f528147b15c37f6939b5a1, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 409a37d1ebfd54b4aac5d0606272c17b, type: 2}
+    - {fileID: 11400000, guid: 74a92a4240891f544816c2e28724695f, type: 2}
