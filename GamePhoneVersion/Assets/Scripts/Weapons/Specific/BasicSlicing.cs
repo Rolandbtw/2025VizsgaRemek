@@ -34,7 +34,10 @@ public class BasicSlicing : MonoBehaviour
 
     private void Awake()
     {
-        movementActions = new PlayerMovementInputActions();
+        if (movementActions == null)
+        {
+            movementActions = new PlayerMovementInputActions();
+        }
     }
 
     private void OnEnable()
@@ -54,7 +57,7 @@ public class BasicSlicing : MonoBehaviour
 
     public void Update()
     {
-        if (movementActions.PlayerMap.Attack.triggered && timer<Time.time && !runes.inventoryIsOpened && Time.timeScale!=0)
+        if (movementActions.PlayerMap.Attack.triggered && timer<Time.time && !runes.inventoryIsOpened && Time.timeScale!=0 && !inventoryScript.usingWeapon)
         {
             StartSlice();
         }

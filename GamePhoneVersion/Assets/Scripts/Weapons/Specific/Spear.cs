@@ -38,7 +38,10 @@ public class Spear : MonoBehaviour
 
     private void Awake()
     {
-        movementActions = new PlayerMovementInputActions();
+        if (movementActions == null)
+        {
+            movementActions = new PlayerMovementInputActions();
+        }
     }
 
     private void OnEnable()

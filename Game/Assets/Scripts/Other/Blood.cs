@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Blood : MonoBehaviour
 {
-    public float duration;
-    public Color originalColor;
+    [SerializeField] float duration;
+    [SerializeField] Color originalColor;
     private SpriteRenderer bloodRenderer;
 
     private void Start()

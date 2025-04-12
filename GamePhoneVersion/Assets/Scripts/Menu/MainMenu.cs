@@ -35,6 +35,8 @@ public class MainMenu : MonoBehaviour
 
     private void Start()
     {
+        Application.targetFrameRate = 60;
+
         StartCoroutine(Transition(endPos, startPos, moveDuration, false));
         PlayerPrefs.SetString("userName", "Guest");
     }

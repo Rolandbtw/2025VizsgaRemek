@@ -6,7 +6,7 @@ using System;
 
 public class DamagePopup : MonoBehaviour
 {
-    public TextMeshProUGUI text;
+    [SerializeField] TextMeshProUGUI text;
 
     private void Start()
     {

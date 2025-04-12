@@ -5,15 +5,15 @@ using UnityEngine;
 public class Staff : MonoBehaviour
 {
     [Header("GameObjects and Transforms")]
-    public GameObject fireBall;
-    public Transform bulletPlace;
-    public GameObject bulletPrefab;
+    [SerializeField] GameObject fireBall;
+    [SerializeField] Transform bulletPlace;
+    [SerializeField] GameObject bulletPrefab;
     [Header("Floats to customize")]
-    public float ultDamage;
-    public float cooldown;
-    public float ultCooldown;
-    public float shootingForce;
-    public float damage;
+    [SerializeField] float ultDamage;
+    [SerializeField] float cooldown;
+    [SerializeField] float ultCooldown;
+    [SerializeField] float shootingForce;
+    [SerializeField] float damage;
 
     private float timer;
     private float ultTimer;

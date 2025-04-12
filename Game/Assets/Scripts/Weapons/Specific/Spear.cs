@@ -5,16 +5,16 @@ using static UnityEngine.GraphicsBuffer;
 public class Spear : MonoBehaviour
 {
     [Header("GameObjects and Transforms")]
-    public GameObject spearTrail;
+    [SerializeField] GameObject spearTrail;
     [Header("Floats to customize")]
-    public float damage;
-    public float windUpTime;
-    public float throwForce;
-    public float pullBackDistance;
-    public float rotationSpeed;
-    public float comeBackSpeed;
-    public float stoppingDistance;
-    public float cooldown;
+    [SerializeField] float damage;
+    [SerializeField] float windUpTime;
+    [SerializeField] float throwForce;
+    [SerializeField] float pullBackDistance;
+    [SerializeField] float rotationSpeed;
+    [SerializeField] float comeBackSpeed;
+    [SerializeField] float stoppingDistance;
+    [SerializeField] float cooldown;
 
     private float timer;
 

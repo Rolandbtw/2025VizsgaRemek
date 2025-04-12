@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Katana : MonoBehaviour
 {
-    public GameObject suriken;
-    public float cooldown;
+    [SerializeField] GameObject suriken;
+    [SerializeField] float cooldown;
     private float timer;
     private Runes runes;
     private Transform player;

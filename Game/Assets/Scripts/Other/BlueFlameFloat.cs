@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class BlueFlameFloat : MonoBehaviour
 {
-    public float moveSpeed = 1;
-    public float moveDistance = 0.005f;
+    [SerializeField] float moveSpeed = 1;
+    [SerializeField] float moveDistance = 0.005f;
     private Vector3 startPosition;
     private Vector3 childStartPosition;
     private float t = 0;

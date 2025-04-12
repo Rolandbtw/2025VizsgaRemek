@@ -1,6 +1,5 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.PackageManager.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -37,7 +36,10 @@ public class Bow : MonoBehaviour
 
     private void Awake()
     {
-        movementActions = new PlayerMovementInputActions();
+        if (movementActions == null)
+        {
+            movementActions = new PlayerMovementInputActions();
+        }
     }
 
     private void OnEnable()

@@ -3,6 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.AddressableAssets;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -12,6 +13,7 @@ public class PauseMenu : MonoBehaviour
     [SerializeField] GameObject baseUI;
     [SerializeField] GameObject runeButton;
     [SerializeField] GameObject circleWipe;
+    [SerializeField] GameObject runesButton;
 
     [Header("Transition variables")]
     [SerializeField] float duration;
@@ -23,11 +25,15 @@ public class PauseMenu : MonoBehaviour
     [Header("Pause bool")]
     public bool isPaused = false;
 
+    private Runes runesScript;
     private PlayerMovementInputActions movementActions;
 
     private void Awake()
     {
-        movementActions = new PlayerMovementInputActions();
+        if (movementActions == null)
+        {
+            movementActions = new PlayerMovementInputActions();
+        }
     }
 
     private void OnEnable()
@@ -37,8 +43,7 @@ public class PauseMenu : MonoBehaviour
 
     private void Start()
     {
-        Resources.UnloadUnusedAssets();
-        System.GC.Collect();
+        runesScript = GameObject.FindGameObjectWithTag("Player").GetComponent<Runes>();
     }
 
     private void Update()
@@ -60,23 +65,25 @@ public class PauseMenu : MonoBehaviour
     {
         userNameText.text = PlayerPrefs.GetString("userName");
 
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Runes>().CloseInventory();
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Runes>().inventoryIsOpened = true;
+        runesScript.inventoryIsOpened = true;
 
+        runesButton.SetActive(false);
         baseUI.SetActive(false);
         circleWipe.SetActive(false);
         pauseMenuUI.SetActive(true);
 
         isPaused = true;
-        Time.timeScale = 0;
 
         weaponsUI.transform.position = new Vector3(100, 100, 0);
+
+        Time.timeScale = 0;
     }
 
     public void ResumeGame()
     {
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Runes>().CloseInventory();
+        runesScript.CloseInventory();
 
+        runesButton.SetActive(true);
         baseUI.SetActive(true);
         circleWipe.SetActive(true);
         pauseMenuUI.SetActive(false);
@@ -87,8 +94,8 @@ public class PauseMenu : MonoBehaviour
 
     public void BackToMenu()
     {
-        GetComponent<SpawnEnemies>().StopAllCoroutines();
         Time.timeScale = 1;
+        GetComponent<SpawnEnemies>().StopAllCoroutines();
         circleWipe.SetActive(true);
         StartCoroutine(Transition(true));
     }
@@ -108,6 +115,9 @@ public class PauseMenu : MonoBehaviour
 
     IEnumerator Transition(bool backToMenu)
     {
+        Addressables.ClearResourceLocators();
+        Resources.UnloadUnusedAssets();
+
         SpawnEnemies sc = GameObject.FindGameObjectWithTag("Generator").GetComponent<SpawnEnemies>();
         StartCoroutine(sc.DeathCircleWipe());
         yield return new WaitForSeconds(1.5f);

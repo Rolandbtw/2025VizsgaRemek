@@ -6,13 +6,13 @@ using static UnityEngine.GridBrushBase;
 public class Sword : MonoBehaviour
 {
     [Header("GameObjects and Transforms")]
-    public Transform slashWavePositon;
-    public GameObject slashWave;
+    [SerializeField] Transform slashWavePositon;
+    [SerializeField] GameObject slashWave;
     [Header("Floats to customize")]
-    public float cooldown;
-    public float damage;
-    public float knockbakcForce;
-    public float waveMoveForce;
+    [SerializeField] float cooldown;
+    [SerializeField] float damage;
+    [SerializeField] float knockbakcForce;
+    [SerializeField] float waveMoveForce;
 
     private Vector3 originalPosition;
     private float timer;

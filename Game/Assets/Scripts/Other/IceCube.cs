@@ -5,10 +5,10 @@ using UnityEngine.AI;
 
 public class IceCube : MonoBehaviour
 {
-    public float duration;
+    [SerializeField] float duration;
     public float waitDuration;
     public Vector3 fullSize;
-    public Vector3 smallSize;
+    [SerializeField] Vector3 smallSize;
 
     public float movementSpeed=0;
     public bool isAimedAtPlayer = true;

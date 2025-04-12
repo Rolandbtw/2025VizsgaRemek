@@ -5,20 +5,20 @@ using UnityEngine;
 public class Hammer : MonoBehaviour
 {
     [Header("GameObjects and Transforms")]
-    public GameObject wave;
-    public Transform impactPoint;
+    [SerializeField] GameObject wave;
+    [SerializeField] Transform impactPoint;
     [Header("Floats to customize")]
-    public float damage;
-    public float knockBackForce;
-    public float slamCooldown;
+    [SerializeField] float damage;
+    [SerializeField] float knockBackForce;
+    [SerializeField] float slamCooldown;
     [Header("Animation varriables")]
-    public float rotationDuration;
-    public float upMotionDuration;
-    public float downMotionDuration;
-    public float moveBackDuration;
-    public float upDistance;
-    public float downDistance;
-    public float waitBetweenMovesDuration;
+    [SerializeField] float rotationDuration;
+    [SerializeField] float upMotionDuration;
+    [SerializeField] float downMotionDuration;
+    [SerializeField] float moveBackDuration;
+    [SerializeField] float upDistance;
+    [SerializeField] float downDistance;
+    [SerializeField] float waitBetweenMovesDuration;
 
     private float cooldown;
     private float timer;
