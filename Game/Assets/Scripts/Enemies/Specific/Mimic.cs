@@ -17,24 +17,73 @@ public class Mimic : MonoBehaviour
     [Header("Knockback settings")]
     [SerializeField] private float knockBackStrength;
 
-    [Header("Damage effects")]
+    [Header("Effects")]
     [SerializeField] GameObject blood;
     [SerializeField] GameObject damageEffect;
+
+    [Header("Other")]
+    [SerializeField] LayerMask raycastLayer;
 
     private SpriteRenderer mimicRenderer;
     private TextMeshProUGUI openChestText;
     private bool canOpenChest = false;
     private bool isOpened = false;
     private bool isDead = false;
+    private bool isTouchingOthers = false;
     private Rigidbody2D rb;
     Sounds soundScript;
 
     private void Start()
     {
         soundScript = GameObject.FindGameObjectWithTag("Generator").GetComponent<Sounds>();
-        rb =GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();
         openChestText = GameObject.FindGameObjectWithTag("PickUpSignal").GetComponent<TextMeshProUGUI>();
         mimicRenderer =GetComponent<SpriteRenderer>();
+
+        CheckPositionCollision(0);
+    }
+
+    void CheckPositionCollision(int attempts)
+    {
+        Vector3 playerPos = GameObject.FindGameObjectWithTag("Player").transform.position;
+
+        isTouchingOthers = false;
+
+        Transform portal = GameObject.FindGameObjectWithTag("Portal").transform;
+
+        Collider2D[] hitColliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<BoxCollider2D>().size, 0);
+        foreach (var collider in hitColliders)
+        {
+            if (collider != null && collider.tag == "Clear" && collider.gameObject != gameObject)
+            {
+                isTouchingOthers = true;
+            }
+        }
+
+        if (Vector2.Distance(transform.position, portal.position) < 5)
+        {
+            isTouchingOthers = true;
+        }
+
+        if (isTouchingOthers && attempts < 10)
+        {
+            Vector3 pos = GameObject.FindGameObjectWithTag("Generator").GetComponent<SpawnEnemies>().RandomPoint(playerPos, 10);
+            transform.position = pos;
+            CheckPositionCollision(attempts + 1);
+        }
+        else
+        {
+            RaycastHit2D[] hit = Physics2D.RaycastAll(transform.position, transform.up * -1, 1, raycastLayer);
+            if (hit.Length > 0)
+            {
+                if (hit[0].collider.gameObject.tag == "wall")
+                {
+                    transform.position += new Vector3(0, 2, 0);
+                }
+            }
+
+            Instantiate(damageEffect, transform.position, transform.rotation);
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

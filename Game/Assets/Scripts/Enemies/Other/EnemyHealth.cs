@@ -41,7 +41,7 @@ public class EnemyHealth : MonoBehaviour
         if (name.Contains("Big Mud") || name.Contains("Elf") || name.Contains("LittleGuy"))
         {
             int enemyCount = GameObject.FindGameObjectWithTag("Generator").GetComponent<SpawnEnemies>().maxEnemyCount;
-            healhPoints += (healhPoints * (enemyCount / 100))*2;
+            healhPoints += (healhPoints * (enemyCount / 100))*5;
             GetComponentInChildren<Canvas>().transform.GetComponentInChildren<Slider>().maxValue = healhPoints;
         }
     }

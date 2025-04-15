@@ -62,13 +62,20 @@ public class Chest : MonoBehaviour
 
         isTouchingOthers = false;
 
+        Transform portal = GameObject.FindGameObjectWithTag("Portal").transform;
+
         Collider2D[] hitColliders = Physics2D.OverlapBoxAll(transform.position, GetComponent<BoxCollider2D>().size, 0);
         foreach (var collider in hitColliders)
         {
-            if (collider != null && (collider.tag == "Clear" || collider.tag == "Portal") && collider.gameObject != gameObject)
+            if (collider != null && collider.tag == "Clear" && collider.gameObject != gameObject)
             {
                 isTouchingOthers = true;
             }
+        }
+
+        if (Vector2.Distance(transform.position, portal.position) < 5)
+        {
+            isTouchingOthers = true;
         }
 
         if (isTouchingOthers && attempts < 10)

@@ -243,6 +243,9 @@ MonoBehaviour:
   knockBackStrength: 5
   blood: {fileID: 6850774184417136427, guid: 8cabef2341f86e44f8fa100523675f66, type: 3}
   damageEffect: {fileID: 6381675629435926277, guid: 74e3f861f8ae9d846ab35ef669458097, type: 3}
+  raycastLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!50 &8816026372156964745
 Rigidbody2D:
   serializedVersion: 4

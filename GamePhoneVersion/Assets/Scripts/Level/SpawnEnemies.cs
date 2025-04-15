@@ -102,17 +102,23 @@ public class SpawnEnemies : MonoBehaviour
         }
 
         Vector3 point = Vector3.zero;
+
+        point = RandomPoint(GetTilemapCenter(), 5);
+        player.transform.position = point + new Vector3(0, 1, 0);
+
         int enemyCount = Random.Range(minEnemyCount, maxEnemyCount);
         usableEnemies = enemies.Take(enemyLevel).ToArray();
         for (int i = 0; i < enemyCount; i++)
         {
             point = RandomPoint(GetTilemapCenter(), spawnRange);
             int enemyType = Random.Range(0, usableEnemies.Length);
-            Instantiate(usableEnemies[enemyType], point, usableEnemies[enemyType].transform.rotation);
+            Transform enemy = Instantiate(usableEnemies[enemyType], point, usableEnemies[enemyType].transform.rotation).transform;
+            if (Vector2.Distance(enemy.position, player.transform.position) < 5)
+            {
+                enemy.position += (enemy.position - player.transform.position).normalized * 3;
+            }
             currentEnemiesAlive++;
         }
-        point = RandomPoint(GetTilemapCenter(), 5);
-        player.transform.position = point + new Vector3(0, 1, 0);
     }
 
     public void SpawnBoss()
